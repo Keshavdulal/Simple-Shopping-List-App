@@ -17,23 +17,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Shopping List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lUQ-zr-cSg">
-                                <rect key="frame" x="0.0" y="44" width="414" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter New List Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6af-N5-HAB">
-                                <rect key="frame" x="0.0" y="64.5" width="414" height="34"/>
+                                <rect key="frame" x="0.0" y="80" width="414" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="listNameInputListener:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="KrI-hE-P6K"/>
+                                </connections>
                             </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2qh-NS-aDN" userLabel="List Container">
-                                <rect key="frame" x="0.0" y="98.5" width="414" height="20.5"/>
+                                <rect key="frame" x="0.0" y="114" width="414" height="20.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shopping List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3iP-nK-EVm">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -44,12 +47,12 @@
                                 </constraints>
                             </stackView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter New List Item" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4f3-2I-KAT">
-                                <rect key="frame" x="0.0" y="119" width="414" height="34"/>
+                                <rect key="frame" x="0.0" y="134.5" width="414" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="uxX-kC-u92" userLabel="List Items Container">
-                                <rect key="frame" x="0.0" y="153" width="414" height="160"/>
+                                <rect key="frame" x="0.0" y="168.5" width="414" height="160"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fzI-4k-Aof" userLabel="Item 1">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="32"/>
@@ -67,6 +70,9 @@
                                             </label>
                                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="7Aj-sF-mCg">
                                                 <rect key="frame" x="320" y="0.0" width="94" height="32"/>
+                                                <connections>
+                                                    <action selector="stepperAction1:" destination="BYZ-38-t0r" eventType="valueChanged" id="TfD-tD-5qE"/>
+                                                </connections>
                                             </stepper>
                                         </subviews>
                                     </stackView>
@@ -86,6 +92,9 @@
                                             </label>
                                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="w8x-zm-eOj">
                                                 <rect key="frame" x="320" y="0.0" width="94" height="32"/>
+                                                <connections>
+                                                    <action selector="stepperAction2:" destination="BYZ-38-t0r" eventType="valueChanged" id="DgI-e2-O6A"/>
+                                                </connections>
                                             </stepper>
                                         </subviews>
                                     </stackView>
@@ -105,6 +114,9 @@
                                             </label>
                                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Fg6-5Q-Dyg">
                                                 <rect key="frame" x="320" y="0.0" width="94" height="32"/>
+                                                <connections>
+                                                    <action selector="stepperAction3:" destination="BYZ-38-t0r" eventType="valueChanged" id="sLJ-bg-vFp"/>
+                                                </connections>
                                             </stepper>
                                         </subviews>
                                     </stackView>
@@ -124,6 +136,9 @@
                                             </label>
                                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="hxi-tO-2GB">
                                                 <rect key="frame" x="320" y="0.0" width="94" height="32"/>
+                                                <connections>
+                                                    <action selector="stepperAction4:" destination="BYZ-38-t0r" eventType="valueChanged" id="5Nh-KN-q4B"/>
+                                                </connections>
                                             </stepper>
                                         </subviews>
                                     </stackView>
@@ -143,6 +158,9 @@
                                             </label>
                                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="ET6-va-Fg3">
                                                 <rect key="frame" x="320" y="0.0" width="94" height="32"/>
+                                                <connections>
+                                                    <action selector="stepperAction5:" destination="BYZ-38-t0r" eventType="valueChanged" id="cvN-SF-kSy"/>
+                                                </connections>
                                             </stepper>
                                         </subviews>
                                     </stackView>
@@ -153,16 +171,19 @@
                                     <constraint firstItem="fzI-4k-Aof" firstAttribute="top" secondItem="uxX-kC-u92" secondAttribute="top" id="tyK-pv-jPF"/>
                                 </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SBE-R1-vUf" userLabel="Button Group">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="SBE-R1-vUf" userLabel="Button Group">
                                 <rect key="frame" x="0.0" y="832" width="414" height="30"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Esb-IM-Lc8">
-                                        <rect key="frame" x="0.0" y="0.0" width="34" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Esb-IM-Lc8">
+                                        <rect key="frame" x="0.0" y="0.0" width="207" height="30"/>
                                         <state key="normal" title="Save"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jBt-bf-tYm">
-                                        <rect key="frame" x="34" y="0.0" width="380" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jBt-bf-tYm">
+                                        <rect key="frame" x="207" y="0.0" width="207" height="30"/>
                                         <state key="normal" title="Cancel"/>
+                                        <connections>
+                                            <action selector="cancelHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4lE-UC-udw"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -190,6 +211,25 @@
                             <constraint firstItem="2qh-NS-aDN" firstAttribute="top" secondItem="6af-N5-HAB" secondAttribute="bottom" id="vd6-us-N8u"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="itemField1" destination="usu-HA-C8F" id="ROZ-Sh-AE5"/>
+                        <outlet property="itemField2" destination="ef8-dM-XeG" id="Mn3-AG-lh7"/>
+                        <outlet property="itemField3" destination="Udx-xH-Vfl" id="114-d5-A0A"/>
+                        <outlet property="itemField4" destination="zUG-b4-ana" id="ci2-6z-VYI"/>
+                        <outlet property="itemField5" destination="XaO-kz-f16" id="3e0-fS-gqp"/>
+                        <outlet property="listName" destination="6af-N5-HAB" id="tOZ-Zj-5f1"/>
+                        <outlet property="listNameDisplay" destination="3iP-nK-EVm" id="Xs2-QE-Kyt"/>
+                        <outlet property="quantity1" destination="mIX-A6-PI8" id="IeA-BC-Hsw"/>
+                        <outlet property="quantity2" destination="nBB-pu-BsY" id="OmU-PG-mfz"/>
+                        <outlet property="quantity3" destination="tL5-Uk-xA3" id="dU4-tg-KxQ"/>
+                        <outlet property="quantity4" destination="n2s-ff-S6H" id="woO-xj-uOV"/>
+                        <outlet property="quantity5" destination="iEt-qL-o2G" id="s2t-J7-a3e"/>
+                        <outlet property="stepper1" destination="7Aj-sF-mCg" id="GOs-8J-nrr"/>
+                        <outlet property="stepper2" destination="w8x-zm-eOj" id="Qhq-Rp-Lye"/>
+                        <outlet property="stepper3" destination="Fg6-5Q-Dyg" id="NKp-kj-iPa"/>
+                        <outlet property="stepper4" destination="hxi-tO-2GB" id="bhk-g7-06Z"/>
+                        <outlet property="stepper5" destination="ET6-va-Fg3" id="CGg-ig-DX4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
