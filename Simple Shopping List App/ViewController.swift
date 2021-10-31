@@ -1,9 +1,10 @@
-//
-//  ViewController.swift
-//  Simple Shopping List App
-//
-//  Created by Keshav Dulal on 01/11/2021.
-//
+ /**
+  * Student Id       : 301209947
+  * Student Name     : Keshav Dulal
+  * Course           : MAPD 711 - Samsung Android App Development
+  * Submission Date  : 10/31/2021
+  * Exercise Number  : Simple Shopping List App
+  */
 
 import UIKit
 
